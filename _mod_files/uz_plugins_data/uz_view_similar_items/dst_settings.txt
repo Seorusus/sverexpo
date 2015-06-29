@@ -1,0 +1,16 @@
+[tables]
+[tpl]
+templates/uz_view_similar_items.tpl
+[lng]
+templates/lang/uz_view_similar_items.lng
+[options]
+increment_version=0
+save_templates=1
+save_sql=1
+save_tables_sql=1
+save_templates_sql=1
+uninstall_drop_sql_data=0
+tables_sql_one_line_query=1
+tables_sql_erase_engine=1
+tables_sql_erase_auto_increment=1
+tables_sql_erase_default_charset=0

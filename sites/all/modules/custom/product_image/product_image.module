@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Product image custom module.
+ *
+ * Created by: Happensit
+ * http://happensit.ru/
+ */
+
+// 
+function product_image_preprocess_node(&$variables) {
+
+	if ($variables['node']->type == 'lamp') {
+        module_load_include('inc', 'pathauto', 'pathauto');
+        $img_path_root = "http://img.svetexpo.ru";
+        $IMAGE_PATH = $img_path_root . '/goods/images/';
+    	$IMAGE_REALPATH = '/var/www/svetexpo/data/www/img.svetexpo.ru/goods/images/'; //$_SERVER['DOCUMENT_ROOT'].'/goods/images/';
+        $sku = $variables['content']['product:commerce_price']['#object']->sku;
+        //$img = pathauto_cleanstring($sku);
+         $img = str_replace(array('/', '.', '(', ')','№', '=', ' '), '_', mb_strtolower($sku));
+        //$img = str_replace(array('/', '.', '(', ')','№', '=', ' '), '_', ($img));
+
+ 	    $base = 'interior/'.$img;
+ 	    $img .= '.jpg';
+    	$brand_name = $variables['content']['field_product']['#object']->field_brand['und'][0]['taxonomy_term']->name;
+
+        if (!empty($brand_name)) {
+            $brand_name = pathauto_cleanstring($brand_name);
+            $variables['big_image'] =  $IMAGE_PATH.$brand_name.'/'.$img;
+            $base = $brand_name.'/'.$base;
+
+        }
+
+
+    if ($variables['view_mode'] == 'full'){
+        $i = 0;
+        $images = array();
+        do {
+            $i++;
+            $file = $IMAGE_REALPATH.$base.'_'.$i.'.jpg';
+            if (file_exists($file)) {
+                $images[] = $IMAGE_PATH.$base.'_'.$i.'.jpg';
+            } else {
+                break;
+            }
+        } while (true);
+
+        $variables['second_image'] = $images;
+    }
+	}
+
+    return $variables;
+
+}
+
+// @todo Прописать в $IMAGE_REALPATH полный путь о поддомена

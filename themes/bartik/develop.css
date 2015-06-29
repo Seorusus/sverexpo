@@ -1,0 +1,25 @@
+fieldset.captcha {
+	border: none;
+}
+fieldset.captcha legend {
+	display: none;
+}
+
+table.register {
+	font-size: 100%;
+}
+table.register tr, table.register tr.even,  table.register tr td {
+	background: transparent !important;
+	vertical-align: top; /* Выравнивание по верхнему краю */
+}
+
+
+
+
+/* Админка */
+
+.droppable-message {
+	line-height: 75px;
+	width: 750px !important;
+	height: 75px !important;
+}

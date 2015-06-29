@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+  <sitemap>
+    <loc>http://svetexpo.ru/sitemap_articles_001.xml</loc>
+    <lastmod>2011-10-13T17:58:00+04:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>http://svetexpo.ru/sitemap_eshop_001.xml</loc>
+    <lastmod>2013-04-30T18:11:53+04:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>http://svetexpo.ru/sitemap_news_001.xml</loc>
+    <lastmod>2011-10-03T13:05:25+04:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>http://svetexpo.ru/sitemap_pages_001.xml</loc>
+    <lastmod>2012-10-12T15:09:00+04:00</lastmod>
+  </sitemap>
+</sitemapindex>

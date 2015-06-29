@@ -1,0 +1,12 @@
+name = Multifield
+description = Provides a combo field type.
+core = 7.x
+dependencies[] = ctools
+configure = admin/structure/multifield
+
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-1.0-unstable6+2-dev"
+core = "7.x"
+project = "multifield"
+datestamp = "1380592214"
+
